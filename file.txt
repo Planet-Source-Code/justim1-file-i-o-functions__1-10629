@@ -1,0 +1,51 @@
+Using FileAttr() 
+FileAttr(filenumber, returntype)
+
+This function returns a long integer representing the file mode for the files opened using the Open statement. 
+--------------------------------------------------Value Mode 
+1     Input 
+2     Output 
+4     Random 
+8     Append 
+32    Binary 
+
+--------------------------------------------------
+
+ Using GetAttr() 
+GetAttr(filename)
+
+This function returns an integer representing the attributes of a file, directory, or a folder. 
+--------------------------------------------------Constant    Value Description 
+vbNormal    0     Normal 
+vbReadOnly  1     Read Only 
+vbHidden    2     Hidden 
+vbSystem    4     System 
+vbDirectory 16    Directory or Folder 
+vbArchive   32    File has changed since last backup 
+
+--------------------------------------------------
+
+ Using FileDateTime() 
+FileDateTime(filename)
+
+This function returns the date and time of when the file was created or last modified. 
+
+Example : 
+MsgBox FileDateTime("C:\file.name")  
+
+ Using FileLen() 
+FileLen(filename)
+
+This function returns a long integer value indicating the file's length (in bytes). 
+
+Example : 
+MsgBox FileLen("C:\file.name")  
+
+ Using FreeFile() 
+FreeFile()
+
+This function returns an integer representing the next file number available for use by the Open statement. 
+
+Example : 
+FileNum = FreeFile
+Open "C:\file.txt" For Output As #FileNum  
